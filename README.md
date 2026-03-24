@@ -145,4 +145,16 @@ Settings → Servers에서 MCP 서버를 추가합니다.
 
 ---
 
-**Developer**: Lim Hwa Chan | **Provider**: Lim Arsenal
+## 🏛️ Project Identity
+
+**Matrix MCP** is a project by **Lim Arsenal**, dedicated to bridging the gap between Large Language Models and real-world tools through the Model Context Protocol.
+
+- **Founder & Lead Developer**: [Lim Hwa Chan](https://github.com/lim-asdk)
+- **Organization**: [Lim Arsenal](https://github.com/lim-asdk)
+- **Status**: Public Beta (v2.0.0)
+
+*"Building the next generation of AI workspaces, one protocol at a time."*
+
+---
+
+© 2026 Lim Arsenal. All rights reserved.
