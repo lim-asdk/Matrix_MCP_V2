@@ -132,7 +132,7 @@ Settings → Servers에서 MCP 서버를 추가합니다.
 - ✅ 개인 사용, 연구, 교육, 비상업적 목적 허용
 - ❌ 상업적 이용 시 별도 상업 라이선스 필요
 
-상업적 이용 문의: Lim Arsenal (lim-asdk)
+상업적 이용 문의: Lim Arsenal (lim-asdk) / rfcon0@gmail.com
 
 ---
 
