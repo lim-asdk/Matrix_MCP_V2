@@ -1,9 +1,14 @@
 # Matrix MCP v2.0
 
+[![Status](https://img.shields.io/badge/Status-Public--Beta-orange?style=for-the-badge)](https://github.com/lim-asdk/Matrix_MCP_V2)
+[![License](https://img.shields.io/badge/License-PolyForm--Noncommercial-blue?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=for-the-badge)](requirements.txt)
+[![MCP](https://img.shields.io/badge/MCP-Native-blueviolet?style=for-the-badge)](https://modelcontextprotocol.io)
+
 **AI-Powered Desktop & Web Workspace — Model Context Protocol (MCP) Native**
 
-Matrix MCP는 MCP 서버와 AI LLM을 연결하는 통합 데스크톱/웹 작업 환경입니다.  
-실제 MCP 도구 호출, 실시간 AI 응답, 데스크톱/브라우저 이중 실행을 지원합니다.
+> Matrix MCP는 MCP 서버와 AI LLM을 연결하는 통합 데스크톱/웹 작업 환경입니다.  
+> 실제 MCP 도구 호출, 실시간 AI 응답, 데스크톱/브라우저 이중 실행을 지원합니다.
 
 ---
 
@@ -36,37 +41,43 @@ Matrix_MCP_v2_0/
 
 ---
 
-## 빠른 시작
+## 🚀 왜 Matrix MCP인가?
 
-### 1. 환경 설정
+- **Zero Configuration AI**: OpenAI 호환 API만 있으면 즉시 시작 가능
+- **Multi-Server Orchestration**: 여러 MCP 서버의 도구를 하나의 채팅창에서 통합 제어
+- **Hybrid Execution**: 로컬 보안을 위한 데스크톱 앱과 접근성을 위한 웹 서버 동시 제공
+
+---
+
+## ⚡ 빠른 시작 (3분)
+
+### 1. 서비스 준비
 
 ```bash
-# 가상환경 생성 (권장)
+# 저장소 복제 및 이동
+git clone https://github.com/lim-asdk/Matrix_MCP_V2.git
+cd Matrix_MCP_V2
+
+# 가상환경 및 의존성 설치
 python -m venv .venv
 .venv\Scripts\activate      # Windows
-# source .venv/bin/activate  # macOS/Linux
-
-# 의존성 설치
 pip install -r requirements.txt
 ```
 
-### 2. 환경 변수 설정
+### 2. 설정 (`.env`)
 
 ```bash
-# .env.example 복사
-copy .env.example .env    # Windows
-# cp .env.example .env   # macOS/Linux
-
-# .env 파일에 API Key 입력
+copy .env.example .env
+# .env 파일을 열어 OPENAI_API_KEY를 입력하세요.
 ```
 
-### 3. 실행
+### 3. 즉시 실행
 
 ```bash
-# 웹 모드 (브라우저 자동 오픈)
+# 🌐 웹 모드 (권장: 브라우저에서 즉시 확인 가능)
 python run_web_server.py
 
-# 데스크톱 모드 (Windows WebView2 필요)
+# 🖥️ 데스크톱 모드 (Windows 전용)
 python run_desktop_app.py
 ```
 

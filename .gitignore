@@ -1,37 +1,46 @@
-.env
+# 🐍 PYTHON / CACHE
 __pycache__/
-.pytest_cache/
-.venv/
-venv/
 *.pyc
 *.pyo
+.pytest_cache/
 
-# User Data (personal, auto-generated)
+# 📦 VIRTUAL ENVIRONMENTS
+.venv/
+venv/
+ENV/
+
+# 🔑 SENSITIVE DATA
+.env
+secret.json
+
+# 📂 USER DATA (PERSONAL / RUNTIME)
 user_data/history/*
 user_data/profiles/*
 user_data/servers/*
 user_data/configs/*
 user_data/logs/*
+user_data/prompts/backups/*
+
+# 🔓 DATA HINTS (KEEP STRUCTURE)
 !user_data/history/.gitkeep
 !user_data/configs/.gitkeep
 !user_data/profiles/profile.example.json
 !user_data/servers/servers.example.json
+!user_data/prompts/.gitkeep
 
-# Logs
+# 📝 LOGS & DB
 *.log
 app.log
 beta_server.log
-
-# Database
 *.db
 *.sqlite
 
-# Internal docs (not for public repo)
+# 🏢 INTERNAL & PRIVATE
 docs/내부문서_git 제외/
 
+# 🖥️ OS & IDE JUNK
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/settings.json
+.vscode/
 .idea/
+.cland/
