@@ -1,24 +1,22 @@
 # Matrix MCP v2.0 — Python Dependencies
-# Install: pip install -r requirements.txt
+# Install with:
+# pip install -r requirements.txt
 
-# 🖥️ DESKTOP WEBVIEW
+# Desktop WebView
 pywebview>=5.0
 
-# 🌐 WEB SERVER (BROWSER MODE)
+# Web Server
 flask>=3.0
 
-# 🤖 AI / LLM SDK
+# AI / LLM
 openai>=1.0
 
-# ⚙️ ENVIRONMENT & CONFIG
+# Environment Variables
 python-dotenv>=1.0
 
-# 🔌 MCP PROTOCOL (OFFICIAL)
-# PyPI: https://pypi.org/project/mcp/
+# MCP Protocol Client
 mcp>=1.0
 
-# 📊 SYSTEM UTILITIES
+# System / Utilities
 psutil>=5.0
-
-# 📡 NETWORK / HTTP CLIENT
 httpx>=0.27
