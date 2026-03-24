@@ -1,8 +1,8 @@
 # Matrix MCP v2.0
 
 > [!NOTE]
-> **제품 소개 및 가치 제안**: [공식 홈페이지](https://lim-asdk.github.io/Matrix_MCP_V2/)를 방문해 주세요.  
-> **기술 문서 및 개발 가이드**: 현재 읽고 계신 파일은 `README.ko-KR.md` 기술 문서입니다.
+> **공식 홍보 홈페이지**: [https://lim-asdk.github.io/Matrix_MCP_V2/](https://lim-asdk.github.io/Matrix_MCP_V2/)  
+> **기술 문서 (README)**: 이 가이드는 설치, 설정 및 아키텍처 정보에 집중합니다.
 
 [English](./README.md) | 한국어
 

@@ -1,8 +1,8 @@
 # Matrix MCP v2.0
 
 > [!NOTE]
-> **Product Introduction & Value Propositions**: Visit our [Official Homepage](https://lim-asdk.github.io/Matrix_MCP_V2/)  
-> **Technical Documentation & Developer Guide**: You are currently reading the `README.md` (Technical Manual)
+> **Official Promotional Homepage**: [https://lim-asdk.github.io/Matrix_MCP_V2/](https://lim-asdk.github.io/Matrix_MCP_V2/)  
+> **Technical Documentation (README)**: This guide focuses on installation, configuration, and architecture.
 
 English | [한국어](./README.ko-KR.md)
 
