@@ -138,6 +138,11 @@ Settings → Servers에서 MCP 서버를 추가합니다.
 
 # Matrix MCP v2.0 (English)
 
+[![Status](https://img.shields.io/badge/Status-Public--Beta-orange?style=for-the-badge)](https://github.com/lim-asdk/Matrix_MCP_V2)
+[![License](https://img.shields.io/badge/License-PolyForm--Noncommercial-blue?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=for-the-badge)](requirements.txt)
+[![MCP](https://img.shields.io/badge/MCP-Native-blueviolet?style=for-the-badge)](https://modelcontextprotocol.io)
+
 **AI-Powered Desktop & Web Workspace — Model Context Protocol (MCP) Native**
 
 > Matrix MCP is a unified desktop and web environment that connects AI LLMs with MCP servers.  
@@ -171,6 +176,14 @@ Matrix_MCP_v2_0/
 ├── run_desktop_app.py   # Desktop app entry point
 └── requirements.txt
 ```
+
+---
+
+## 🚀 Why Matrix MCP?
+
+- **Zero Configuration AI**: Start immediately with any OpenAI-compatible API.
+- **Multi-Server Orchestration**: Manage tools from multiple MCP servers in a single chat interface.
+- **Hybrid Execution**: Provides a secure desktop app and an accessible web server simultaneously.
 
 ---
 
@@ -230,6 +243,18 @@ Refer to `user_data/servers/servers.example.json` for structure examples.
 
 ---
 
+## 📊 Current Status
+
+**Public Beta (v2.0)**
+
+- ✅ Web Mode: Confirmed working
+- ✅ Desktop Mode: Confirmed working on Windows + WebView2
+- ✅ MCP stdio/SSE Connectivity
+- ✅ Multi-AI Profiles
+- 🔄 PyPI Package Release — Planned
+
+---
+
 ## 🛡️ Security Principles
 
 - **API Keys**: Never hardcode keys. Always use the `.env` file.
@@ -249,12 +274,12 @@ Commercial inquiries: Lim Arsenal (lim-asdk) / rfcon0@gmail.com
 
 ---
 
-## 로드맵
+## 🗺️ Roadmap
 
-- [ ] PyPI 패키지 배포
-- [ ] IQ-Pack 마켓플레이스
-- [ ] 멀티 에이전트 오케스트레이션
-- [ ] 클라우드 동기화
+- [ ] PyPI Package Distribution
+- [ ] IQ-Pack Marketplace
+- [ ] Multi-Agent Orchestration
+- [ ] Cloud Synchronization
 
 ---
 
