@@ -1,17 +1,17 @@
 # Matrix MCP v2.0
 
+> [!NOTE]
+> **제품 소개 및 가치 제안**: [공식 홈페이지](https://lim-asdk.github.io/Matrix_MCP_V2/)를 방문해 주세요.  
+> **기술 문서 및 개발 가이드**: 현재 읽고 계신 파일은 `README.ko-KR.md` 기술 문서입니다.
+
 [English](./README.md) | 한국어
 
-[![Status](https://img.shields.io/badge/상태-공개_베타-orange?style=for-the-badge)](https://github.com/lim-asdk/Matrix_MCP_V2)
+[![Status](https://img.shields.io/badge/Status-Public--Beta-orange?style=for-the-badge)](https://github.com/lim-asdk/Matrix_MCP_V2)
 [![License](https://img.shields.io/badge/라이선스-PolyForm--비상업용-blue?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=for-the-badge)](requirements.txt)
 
 **전문적인 MCP 운영 워크스페이스.**  
 Model Context Protocol(MCP) 서버와 AI 프로필을 연결, 테스트 및 관리하기 위한 전문 환경입니다.
-
----
-
-[**🚀 제품 홈페이지 바로가기**](https://lim-asdk.github.io/Matrix_MCP_V2/) | [**💾 최신 릴리스 다운로드**](https://github.com/lim-asdk/Matrix_MCP_V2/releases/latest)
 
 ---
 
@@ -27,73 +27,55 @@ Matrix MCP는 Model Context Protocol의 **운영(Operational)** 측면에 집중
 
 ---
 
----
+## 🚀 빠른 시작 (Quick Start)
 
-## 🚀 주요 특징
-
-- **MCP 네이티브 지원**: **stdio** 및 **SSE**를 통한 로컬/원격 MCP 서버 연결.
-- **멀티 AI 프로필**: OpenAI, xAI Grok, DeepSeek 등 모든 OpenAI 호환 API 지원.
-- **하이브리드 런타임**: **Windows 데스크톱** 앱과 **웹 서버** 모드 동시 지원.
-- **AI 페르소나 시스템**: `.txt` 파일 기반의 역할 설정으로 AI 행동 양식 제어.
-- **도구 작업 공간**: MCP 도구 호출 과정 및 결과를 채팅창에서 실시간으로 확인.
-
----
-
-## ⚡ 빠른 시작 (3분 가이드)
-
-### 1. 설치 및 환경 준비
+### 1. 설치 (Installation)
 ```bash
 git clone https://github.com/lim-asdk/Matrix_MCP_V2.git
 cd Matrix_MCP_V2
 python -m venv .venv
 ```
 
-**가상환경 활성화:**
-- Windows: `.venv\Scripts\activate`
-- macOS/Linux: `source .venv/bin/activate`
+**가상환경 활성화 (Activate Environment):**
+- **Windows**: `.venv\Scripts\activate`
+- **macOS/Linux**: `source .venv/bin/activate`
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. 설정
+### 2. 환경 설정 (Configuration)
 ```bash
+# 예시 환경 파일 복사
 copy .env.example .env
-# .env 파일을 열어 OPENAI_API_KEY를 입력하세요.
+# .env 파일을 열어 API Key (OPENAI_API_KEY 등)를 입력하세요.
 ```
 
-### 3. 실행 모드 선택
-- **웹 모드 (권장)**: `python run_web_server.py` (브라우저에서 즉시 확인)
-- **데스크톱 모드**: `python run_desktop_app.py` (Windows 전용, WebView2 필요)
+### 3. 실행 (Execution)
+- **웹 모드 (Web Mode)**: `python run_web_server.py`
+- **데스크톱 모드 (Desktop Mode)**: `python run_desktop_app.py`
 
 ---
 
-## ⚙️ 실행 모드 비교
+## ⚙️ 실행 모드 (Run Modes)
 
-| 모드 | 실행 명령어 | 특징 |
-|:---:|---|---|
-| **웹** | `python run_web_server.py` | 모든 브라우저 지원, 가장 안정적인 첫 실행 방법 |
-| **데스크톱** | `python run_desktop_app.py` | Windows 네이티브 창 실행, WebView2 환경 필요 |
+| 모드 | 명령문 | 플랫폼 | 설명 |
+| :--- | :--- | :--- | :--- |
+| **Web (기본)** | `python run_web_server.py` | 공통 | 권장 모드. 로컬 웹 서버로 앱을 띄워 브라우저로 접속합니다. |
+| **Desktop** | `python run_desktop_app.py` | Windows | WebView2 기반의 단독 창으로 실행하며 데스크톱 앱과 같은 사용성을 제공합니다. |
 
 ---
 
-## 🔗 기본 제공 테스트 노드
+## 🔗 공식 테스트 노드 (Official Test Node)
 
-사용자가 클론 즉시 성능을 체험할 수 있도록 공식 테스트 노드를 사전 제공합니다:
+Matrix MCP는 즉시 사용 가능한 SSE 테스트 노드를 기본적으로 포함하고 있습니다.
 - **SSE URL**: `http://35.202.58.51:8766/sse`
-- **프로젝트**: [Open World News MCP (GitHub)](https://github.com/lim-asdk/open-world-news-mcp)
-
----
-
-## 📄 세부 문서 바로가기
-- [상세 빠른 시작 가이드](./docs/ko/QUICK_START.md)
-- [시스템 아키텍처 개요](./docs/ko/ARCHITECTURE.md)
-- [최신 릴리스 노트](./docs/ko/RELEASE_NOTES_v2.0.0-beta1.md)
+- **소스**: [Open World News MCP](https://github.com/lim-asdk/open-world-news-mcp)
 
 ---
 
 ## 🏛️ 프로젝트 정체성
 Matrix MCP는 **Lim Arsenal (lim-asdk)**의 프로젝트입니다.  
-본 프로젝트는 **PolyForm Noncommercial License 1.0**에 따라 배포됩니다.
+**PolyForm Noncommercial License 1.0** 라이선스를 따릅니다.
 
 © 2026 Lim Arsenal. All rights reserved.

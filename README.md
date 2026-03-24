@@ -1,5 +1,9 @@
 # Matrix MCP v2.0
 
+> [!NOTE]
+> **Product Introduction & Value Propositions**: Visit our [Official Homepage](https://lim-asdk.github.io/Matrix_MCP_V2/)  
+> **Technical Documentation & Developer Guide**: You are currently reading the `README.md`
+
 English | [한국어](./README.ko-KR.md)
 
 [![Status](https://img.shields.io/badge/Status-Public--Beta-orange?style=for-the-badge)](https://github.com/lim-asdk/Matrix_MCP_V2)
@@ -9,10 +13,6 @@ English | [한국어](./README.ko-KR.md)
 
 **Professional MCP Operation Workspace.**  
 A specialized environment for connecting, testing, and managing Model Context Protocol (MCP) servers and AI profiles.
-
----
-
-[**🚀 Launch Product Homepage**](https://lim-asdk.github.io/Matrix_MCP_V2/) | [**💾 Download Latest Release**](https://github.com/lim-asdk/Matrix_MCP_V2/releases/latest)
 
 ---
 
@@ -28,9 +28,7 @@ Matrix MCP is a specialized workspace focused on the **operational** aspects of 
 
 ---
 
----
-
-## ⚡ Quick Start
+## 🚀 Quick Start
 
 ### 1. Installation
 ```bash
@@ -40,8 +38,8 @@ python -m venv .venv
 ```
 
 **Activate Environment:**
-- Windows: `.venv\Scripts\activate`
-- macOS/Linux: `source .venv/bin/activate`
+- **Windows**: `.venv\Scripts\activate`
+- **macOS/Linux**: `source .venv/bin/activate`
 
 ```bash
 pip install -r requirements.txt
@@ -49,22 +47,23 @@ pip install -r requirements.txt
 
 ### 2. Configuration
 ```bash
+# Copy example environment file
 copy .env.example .env
-# Open .env and add your OPENAI_API_KEY
+# Edit .env and provide your API Key (OPENAI_API_KEY or equivalent)
 ```
 
-### 3. Run
-- **Web Mode**: `python run_web_server.py` (Recommended)
-- **Desktop Mode**: `python run_desktop_app.py` (Windows Only)
+### 3. Execution
+- **Web Mode** (Terminal): `python run_web_server.py`
+- **Desktop Mode** (Windows): `python run_desktop_app.py`
 
 ---
 
 ## ⚙️ Run Modes
 
-| Mode | Command | Platform |
-|:---:|---|---|
-| **Web** | `python run_web_server.py` | Browser-based, Universal |
-| **Desktop** | `python run_desktop_app.py` | Windows Native (WebView2) |
+| Mode | Command | Platform | Description |
+| :--- | :--- | :--- | :--- |
+| **Web (Primary)** | `python run_web_server.py` | Universal | Recommended. Runs as a local web server accessible via browser. |
+| **Desktop** | `python run_desktop_app.py` | Windows | Native wrapper using WebView2 for a dedicated window experience. |
 
 ---
 
@@ -73,13 +72,6 @@ copy .env.example .env
 Matrix MCP comes with a pre-configured SSE test node:
 - **SSE URL**: `http://35.202.58.51:8766/sse`
 - **Source**: [Open World News MCP](https://github.com/lim-asdk/open-world-news-mcp)
-
----
-
-## 📄 Further Reading
-- [Detailed Quick Start](./docs/en/QUICK_START.md)
-- [Architecture Overview](./docs/en/ARCHITECTURE.md)
-- [Release Notes](./docs/en/RELEASE_NOTES_v2.0.0-beta1.md)
 
 ---
 
