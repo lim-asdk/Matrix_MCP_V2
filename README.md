@@ -136,6 +136,119 @@ Settings → Servers에서 MCP 서버를 추가합니다.
 
 ---
 
+# Matrix MCP v2.0 (English)
+
+**AI-Powered Desktop & Web Workspace — Model Context Protocol (MCP) Native**
+
+> Matrix MCP is a unified desktop and web environment that connects AI LLMs with MCP servers.  
+> It supports real MCP tool calling, real-time AI responses, and dual execution in both desktop and browser modes.
+
+---
+
+## 🌟 Key Features
+
+- 🔗 **MCP Server Connectivity** — Supports both stdio and SSE transports, connecting to multiple servers simultaneously.
+- 🤖 **AI Profile Management** — Compatible with any OpenAI-style API (OpenAI, xAI Grok, DeepSeek, etc.).
+- 🧠 **Persona System** — Define AI behaviors through role-based persona files (.txt).
+- 🛠️ **Tool Call Logs** — Real-time visualization of MCP tool execution within the chat interface.
+- 🌐 **Dual Execution Mode** — Run as a desktop app (pywebview) or a web server (browser-based).
+
+---
+
+## 📐 Architecture Overview
+
+```
+Matrix_MCP_v2_0/
+├── lim_arsenal/         # Core Engine (Layered architecture)
+│   └── engine/
+│       ├── L1_Infrastructure/   # Paths, Configs, MCP handlers
+│       ├── L2_AI_Engine/        # AI response processing
+│       ├── L3_Orchestration/    # Bridge API, Orchestrator
+│       ├── L4_Prompt/           # Prompts, Persona loader
+│       └── L5_Presentation/     # HTML/JS UI
+├── user_data/           # User's local data (Excluded from git)
+├── run_web_server.py    # Web server entry point
+├── run_desktop_app.py   # Desktop app entry point
+└── requirements.txt
+```
+
+---
+
+## ⚡ Quick Start (3 Minutes)
+
+### 1. Preparation
+
+```bash
+# Clone and enter the repository
+git clone https://github.com/lim-asdk/Matrix_MCP_V2.git
+cd Matrix_MCP_V2
+
+# Create virtual environment and install dependencies
+python -m venv .venv
+.venv\Scripts\activate      # Windows
+pip install -r requirements.txt
+```
+
+### 2. Configuration (`.env`)
+
+```bash
+copy .env.example .env
+# Open .env and enter your OPENAI_API_KEY.
+```
+
+### 3. Run Immediately
+
+```bash
+# 🌐 Web Mode (Recommended: Easiest to start)
+python run_web_server.py
+
+# 🖥️ Desktop Mode (Windows exclusive)
+python run_desktop_app.py
+```
+
+---
+
+## ⚙️ Execution Modes
+
+| Mode | Command | Features |
+|---|---|---|
+| Web | `python run_web_server.py` | Browser-based, high OS portability |
+| Desktop | `python run_desktop_app.py` | Native Windows window, requires WebView2 |
+
+> **Tip**: For new environments, start with Web Mode first to verify core functionality.
+
+---
+
+## 🔗 Connecting MCP Servers
+
+Add MCP servers under **Settings → Servers** in the UI.
+
+- **stdio**: Run local Python/Node scripts (`python your_server.py`)
+- **SSE**: Remote server URL (`http://host/sse`)
+
+Refer to `user_data/servers/servers.example.json` for structure examples.
+
+---
+
+## 🛡️ Security Principles
+
+- **API Keys**: Never hardcode keys. Always use the `.env` file.
+- **Local Privacy**: `user_data/` is ignored by `.gitignore` to keep your history and profiles private.
+- **Pure Code**: Real server URLs and personal chat histories are purged from the public repo.
+
+---
+
+## 📄 License
+
+This project is distributed under the **PolyForm Noncommercial License 1.0**.
+
+- ✅ Personal, Research, Educational, and Non-commercial use permitted.
+- ❌ Commercial use requires a separate license.
+
+Commercial inquiries: Lim Arsenal (lim-asdk) / rfcon0@gmail.com
+
+---
+
 ## 로드맵
 
 - [ ] PyPI 패키지 배포
