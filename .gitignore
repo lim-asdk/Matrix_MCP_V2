@@ -1,0 +1,37 @@
+.env
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+*.pyo
+
+# User Data (personal, auto-generated)
+user_data/history/*
+user_data/profiles/*
+user_data/servers/*
+user_data/configs/*
+user_data/logs/*
+!user_data/history/.gitkeep
+!user_data/configs/.gitkeep
+!user_data/profiles/profile.example.json
+!user_data/servers/servers.example.json
+
+# Logs
+*.log
+app.log
+beta_server.log
+
+# Database
+*.db
+*.sqlite
+
+# Internal docs (not for public repo)
+docs/내부문서_git 제외/
+
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/

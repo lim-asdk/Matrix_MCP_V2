@@ -1,0 +1,8 @@
+{
+  "id": "example_profile",
+  "name": "My AI Profile",
+  "model": "gpt-4o",
+  "base_url": "https://api.openai.com/v1",
+  "system_prompt": "You are a helpful assistant.",
+  "key_file": "example_profile.json"
+}

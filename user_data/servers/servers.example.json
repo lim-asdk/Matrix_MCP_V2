@@ -1,0 +1,17 @@
+{
+  "asdk_official_sample_sse": {
+    "name": "asdk_official_sample_sse",
+    "transport": "http",
+    "url": "http://35.202.58.51:8766/sse",
+    "headers": {}
+  },
+  "local_python_server": {
+    "name": "local_python_server",
+    "transport": "stdio",
+    "command": "python",
+    "args": ["path/to/server.py"],
+    "env": {
+      "PYTHONUNBUFFERED": "1"
+    }
+  }
+}
