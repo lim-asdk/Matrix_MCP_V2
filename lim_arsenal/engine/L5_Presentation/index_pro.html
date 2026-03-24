@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix MCP v2.0 | Professional AI Workspace</title>
-    <script src="browser_patch.js"></script>
+    <script src="lim_arsenal/engine/L5_Presentation/browser_patch.js"></script>
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
@@ -380,7 +380,7 @@
 
         .status-llm {
             color: #f59e0b;
-            /* [UI 개선] 분석중 상태를 눈에 띄게 (Amber-500) */
+            /* [UI 개선] 분석�??�태�??�에 ?�게 (Amber-500) */
             font-weight: bold;
             text-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
             animation: pulseText 1.5s infinite;
@@ -413,10 +413,10 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* [UI 개선] 로딩 인디케이터 (Thinking...) */
+        /* [UI 개선] 로딩 ?�디케?�터 (Thinking...) */
         .typing-indicator {
             display: none;
-            /* 기본 숨김 */
+            /* 기본 ?��? */
             align-items: center;
             gap: 5px;
             padding: 10px 15px;
@@ -629,7 +629,7 @@
             transform: translateX(20px);
         }
 
-        /* [UI 개선] 도구 아코디언 및 복사 버튼 스타일 */
+        /* [UI 개선] ?�구 ?�코?�언 �?복사 버튼 ?��???*/
         .tool-accordion-item {
             border: 1px solid #334155;
             border-radius: 6px;
@@ -709,8 +709,8 @@
             cursor: pointer;
         }
 
-        /* [UI 개선] 아코디언 & 로그 토글 스타일 */
-        /* [UI 개선] 아코디언 & 로그 토글 스타일 */
+        /* [UI 개선] ?�코?�언 & 로그 ?��? ?��???*/
+        /* [UI 개선] ?�코?�언 & 로그 ?��? ?��???*/
         .section-title {
             cursor: pointer;
             user-select: none;
@@ -726,9 +726,9 @@
             /* Slight padding for the arrow box */
         }
 
-        /* 화살표를 왼쪽으로 이동 (::before 사용) */
+        /* ?�살?��? ?�쪽?�로 ?�동 (::before ?�용) */
         .section-title::before {
-            content: '►';
+            content: '??;
             /* Default collapsed (Right) */
             font-size: 10px;
             transition: transform 0.2s;
@@ -739,27 +739,27 @@
             text-align: center;
         }
 
-        /* 화살표 회전 로직 수정: .collapsed가 아닐 때(즉, 펼쳐져 있을 때) 아래로 회전 */
-        /* 기본 상태: 펼쳐짐 (Arrows should be Down) */
-        /* 하지만 사용자는 "Tools is reversed"라고 함. 
-           HTML 구조상 .section-content에 .collapsed가 없으면 펼쳐진 상태임.
-           따라서 펼쳐진 상태일 때 Arrow는 Down(▼)이어야 함.
+        /* ?�살???�전 로직 ?�정: .collapsed가 ?�닐 ??�? ?�쳐???�을 ?? ?�래�??�전 */
+        /* 기본 ?�태: ?�쳐�?(Arrows should be Down) */
+        /* ?��?�??�용?�는 "Tools is reversed"?�고 ?? 
+           HTML 구조??.section-content??.collapsed가 ?�으�??�쳐�??�태??
+           ?�라???�쳐�??�태????Arrow??Down(???�어????
            
-           현재: .section-title::before { content: '►' }
-           펼쳐지면 (즉 no .collapsed class on title) -> Rotate 90deg to make it Down?
-           Or just change default content to '▼' and rotate -90 when collapsed?
+           ?�재: .section-title::before { content: '?? }
+           ?�쳐지�?(�?no .collapsed class on title) -> Rotate 90deg to make it Down?
+           Or just change default content to '?? and rotate -90 when collapsed?
            
-           Let's go with: Default (Open) = '▼'. Collapsed = Rotate -90 (points Right).
+           Let's go with: Default (Open) = '??. Collapsed = Rotate -90 (points Right).
         */
         .section-title::before {
-            content: '▼';
+            content: '??;
         }
 
         .section-title.collapsed::before {
             transform: rotate(-90deg);
         }
 
-        /* 기존 ::after 제거 */
+        /* 기존 ::after ?�거 */
         .section-title::after {
             content: none;
         }
@@ -844,24 +844,24 @@
             word-break: break-word;
         }
 
-        /* 로그 숨김 처리 */
+        /* 로그 ?��? 처리 */
         body.hide-logs .tool-bubble {
             display: none !important;
         }
 
-        /* 로그가 숨겨졌을 때, 로그 대신 작은 아이콘만 표시하고 싶다면 아래와 같이 변형 가능하지만, 
-           사용자 요청은 "보이거나 안 보이거나"이므로 완전 숨김 처리함. 
-           다만, 빈 줄이 생기는 것을 방지하기 위해 entry 자체를 숨길 수도 있음.
-           하지만 entry 내에 tool-bubble만 있는 경우도 있고 섞인 경우도 있을 수 있음.
-           현재 구조상 tool-bubble은 별도 entry로 생성됨 (renderData 함수 확인).
-           따라서 .entry:has(.tool-bubble) 방식으로 숨기는게 좋으나, :has는 최신 브라우저용.
-           JS로 처리하는게 확실하지만 CSS로 일단 tool-bubble만 숨겨도 됨.
+        /* 로그가 ?�겨졌을 ?? 로그 ?�???��? ?�이콘만 ?�시?�고 ?�다�??�래?� 같이 변??가?�하지�? 
+           ?�용???�청?� "보이거나 ??보이거나"?��?�??�전 ?��? 처리?? 
+           ?�만, �?줄이 ?�기??것을 방�??�기 ?�해 entry ?�체�??�길 ?�도 ?�음.
+           ?��?�?entry ?�에 tool-bubble�??�는 경우???�고 ?�인 경우???�을 ???�음.
+           ?�재 구조??tool-bubble?� 별도 entry�??�성??(renderData ?�수 ?�인).
+           ?�라??.entry:has(.tool-bubble) 방식?�로 ?�기?�게 좋으?? :has??최신 브라?��???
+           JS�?처리?�는�??�실?��?�?CSS�??�단 tool-bubble�??�겨????
         */
         body.hide-logs .entry:has(.tool-bubble) {
             display: none;
         }
 
-        /* [UI 개선] 사이드바 컨트롤 패널 스타일 */
+        /* [UI 개선] ?�이?�바 컨트�??�널 ?��???*/
         .control-panel {
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid #334155;
@@ -1016,7 +1016,7 @@
             <div
                 style="width: 16px; height: 16px; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 3px;">
             </div>
-            Matrix MCP <span id="sidebar-version"
+            🤖 Matrix MCP <span id="sidebar-version"
                 style="font-size:11px; color:rgba(255,215,0,0.7); margin-left:auto;">v2.0</span>
         </div>
 
@@ -1039,7 +1039,7 @@
             </div>
             <!-- Tool Logs -->
             <div class="control-row">
-                <span>👁️ Tool Logs</span>
+                <span>?���?Tool Logs</span>
                 <label class="switch" style="transform:scale(0.8);">
                     <input type="checkbox" id="log-mode-check" checked onchange="toggleLogs()">
                     <span class="slider"></span>
@@ -1048,7 +1048,7 @@
             <!-- Server Mode -->
             <div class="control-row">
                 <span style="display:flex; align-items:center; gap:5px;">
-                    🖥️ Server
+                    ?���?Server
                     <span id="server-mode-status" class="server-status" style="font-size:10px;">OFF</span>
                 </span>
                 <label class="switch" style="transform:scale(0.8);">
@@ -1061,7 +1061,7 @@
             <div style="border-top: 1px solid #334155; margin-top: 10px; padding-top: 10px;">
                 <button onclick="openProfileModal()"
                     style="width:100%; padding:8px; background: #334155; color:white; border:none; border-radius:6px; cursor:pointer; font-size:13px; display:flex; justify-content:center; align-items:center; gap:5px;">
-                    ⚙️ Settings
+                    ?�️ Settings
                 </button>
             </div>
         </div>
@@ -1094,7 +1094,7 @@
             <div style="display: flex; align-items: center; gap: 15px;">
                 <button onclick="toggleSidebar()" title="Toggle Sidebar"
                     style="background:none; border:none; color:#94a3b8; font-size:20px; cursor:pointer; padding:0; display:flex; align-items:center; transition:color 0.2s;">
-                    ☰
+                    �0
                 </button>
                 <div style="font-weight: 600;">Matrix <span style="font-weight: 400; color: #94a3b8;">MCP v2.0</span> <span style="font-size: 12px; font-weight: 400; margin-left: 5px; color: #64748b;">(Beta)</span></div>
             </div>
@@ -1144,12 +1144,12 @@
                         <div class="feature-text">Use your preferred OpenAI-compatible model stack for all your tool executions.</div>
                     </div>
                     <div class="feature-card">
-                        <span class="feature-icon">⚙️</span>
+                        <span class="feature-icon">?�️</span>
                         <div class="feature-title">Persona System</div>
                         <div class="feature-text">Shape AI behavior with simple persona files to match your specific workflow needs.</div>
                     </div>
                     <div class="feature-card">
-                        <span class="feature-icon">🛠️</span>
+                        <span class="feature-icon">?���?/span>
                         <div class="feature-title">Tool Workspace</div>
                         <div class="feature-text">Inspect tool execution, raw logs, and results in a single, unified workspace.</div>
                     </div>
@@ -1165,19 +1165,19 @@
                     <code style="display: block; padding: 10px; background: rgba(0,0,0,0.3); border-radius: 6px; color: #f8fafc; font-family: monospace; font-size: 12px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.05);">
                         http://35.202.58.51:8766/sse
                     </code>
-                    <a href="https://github.com/lim-asdk/open-world-news-mcp" target="_blank" style="font-size: 12px; color: #64748b; text-decoration: none;">View Source: Open World News MCP →</a>
+                    <a href="https://github.com/lim-asdk/open-world-news-mcp" target="_blank" style="font-size: 12px; color: #64748b; text-decoration: none;">View Source: Open World News MCP  →</a>
                 </div>
 
                 <div class="section-title" style="cursor: default; font-size: 14px; margin-top: 40px;"><span>Flexible Access</span></div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
                     <div style="padding: 24px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px;">
-                        <div style="font-size: 15px; font-weight: 600; color: #60a5fa; margin-bottom: 8px;">🌐 Web-First Architecture</div>
+                        <div style="font-size: 15px; font-weight: 600; color: #60a5fa; margin-bottom: 8px;">?�� Web-First Architecture</div>
                         <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
                             Best for quick testing and universal browser access. Experience the latest UI updates instantly.
                         </p>
                     </div>
                     <div style="padding: 24px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px;">
-                        <div style="font-size: 15px; font-weight: 600; color: #10b981; margin-bottom: 8px;">🖥️ Native Desktop Experience</div>
+                        <div style="font-size: 15px; font-weight: 600; color: #10b981; margin-bottom: 8px;">?���?Native Desktop Experience</div>
                         <p style="font-size: 13px; color: #94a3b8; line-height: 1.6; margin: 0;">
                             Best for dedicated local Windows operation. Utilizes WebView2 for a stable, independent window.
                         </p>
@@ -1192,7 +1192,7 @@
                     </p>
                     <a href="https://github.com/lim-asdk/Matrix_MCP_V2#README" target="_blank" 
                        style="background: #3b82f6; color: white; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                        📖 Read Technical Setup Guide <span style="font-size: 14px;">→</span>
+                        📖 Read Technical Setup Guide <span style="font-size: 14px;"> →</span>
                     </a>
                 </div>
 
@@ -1203,7 +1203,7 @@
             </div>
         </div>
 
-        <!-- [UI 개선] 로딩 인디케이터 영역 -->
+        <!-- [UI 개선] 로딩 ?�디케?�터 ?�역 -->
         <div id="loading-indicator" class="typing-indicator">
             <span>Thinking</span>
             <div class="typing-dot"></div>
@@ -1233,7 +1233,7 @@
             </div>
 
             <div id="settings-ai" class="tab-panel">
-                <h3 style="margin-top:0">⚙️ AI Profiles</h3>
+                <h3 style="margin-top:0">?�️ AI Profiles</h3>
                 <select id="profile-select" onchange="loadProfileForm(this.value)">
                     <option value="new">+ Create New Profile</option>
                 </select>
@@ -1298,7 +1298,7 @@
             </div>
 
             <div id="settings-server" class="tab-panel" style="display:none;">
-                <h3 style="margin-top:0">🧰 Manage Servers</h3>
+                <h3 style="margin-top:0">?�� Manage Servers</h3>
                 <div style="border-top:1px solid #334155; margin-top:15px; padding-top:15px;">
                     <label>Server List</label>
                     <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px;">
@@ -1353,7 +1353,7 @@
                     <div id="server-tools-area"
                         style="margin-top:15px; display:none; background:rgba(0,0,0,0.2); border-radius:6px; padding:10px;">
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-                            <h4 style="margin:0; font-size:13px; color:#94a3b8;">🛠️ Available Tools</h4>
+                            <h4 style="margin:0; font-size:13px; color:#94a3b8;">?���?Available Tools</h4>
                             <label style="font-size:11px; color:#94a3b8; display:flex; align-items:center; gap:4px; cursor:pointer;">
                                 <input type="checkbox" id="toggle-all-tools" onchange="onToggleAllTools(event)" style="width:13px; height:13px; margin:0;"> Toggle All
                             </label>
@@ -1367,7 +1367,7 @@
             <div id="settings-system-container"></div>
 
             <div id="settings-packs" class="tab-panel" style="display:none;">
-                <h3 style="margin-top:0">📦 Intelligence Packs (IQ-Pack)</h3>
+                <h3 style="margin-top:0">?�� Intelligence Packs (IQ-Pack)</h3>
                 <p style="font-size: 12px; color: #94a3b8; margin-bottom: 15px;">
                     Select an Intelligence Pack to change the AI's core behavior, personas, and specialized tools.
                 </p>
@@ -1404,8 +1404,8 @@
 
                     <div style="margin-top: 20px; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 6px;">
                         <ul style="margin:0; padding:0; font-size: 11px; color: #94a3b8; list-style: none;">
-                            <li style="margin-bottom:5px;">ℹ️ <b>Selection is Immediate:</b> Switching the pack above instantly updates the system path.</li>
-                            <li style="margin-bottom:5px;">✅ Info from <code>intro.json</code> is displayed automatically.</li>
+                            <li style="margin-bottom:5px;">?�️ <b>Selection is Immediate:</b> Switching the pack above instantly updates the system path.</li>
+                            <li style="margin-bottom:5px;">??Info from <code>intro.json</code> is displayed automatically.</li>
                         </ul>
                     </div>
                 </div>
@@ -1611,7 +1611,7 @@
                         <span style="flex: 1; cursor: pointer;" onclick="loadSession('${h.filename}')">${h.display}</span>
                         <span onclick="event.stopPropagation(); deleteSession('${h.filename}')" 
                                title="Delete chat"
-                               style="font-size: 12px; cursor: pointer; opacity: 0.5; padding-left: 10px;">🗑️</span>
+                               style="font-size: 12px; cursor: pointer; opacity: 0.5; padding-left: 10px;">?���?/span>
                     </div>`).join('');
                 safeUpdateInnerHTML('history-list', html);
             } catch (e) { }
@@ -1701,7 +1701,7 @@
             input.value = '';
 
             displayMessage({ role: 'user', content: msg });
-            setStatusBadge('llm', '🔍 Analyzing...');
+            setStatusBadge('llm', '?�� Analyzing...');
 
             try {
                 const isAi = document.getElementById('ai-mode-check')?.checked;
@@ -1715,7 +1715,7 @@
                 }
             } catch (e) {
                 alert('Communication error: ' + e.message);
-                displayMessage({ role: 'assistant', content: '❌ An error occurred. Please try again later.' });
+                displayMessage({ role: 'assistant', content: '??An error occurred. Please try again later.' });
             } finally {
                 input.disabled = false;
                 if (btn) btn.disabled = false;
@@ -1744,9 +1744,9 @@
                 <div class="bubble tool-bubble" style="background: rgba(30, 41, 59, 0.4); border: 1px dashed #475569; padding: 10px;">
                     <details>
                         <summary style="font-size:11px; cursor:pointer; color:#94a3b8; outline:none; display:flex; justify-content:space-between; align-items:center;">
-                            <span>📦 ${title} (click to expand)</span>
+                            <span>?�� ${title} (click to expand)</span>
                             <button onclick="copyToolResult(event, this)" data-json='${jsonStr.replace(/'/g, "&#39;")}' 
-                                style="padding:4px 8px; background:#6366f1; color:white; border:none; border-radius:4px; cursor:pointer; font-size:10px; margin-left:10px;">📋 Copy JSON</button>
+                                style="padding:4px 8px; background:#6366f1; color:white; border:none; border-radius:4px; cursor:pointer; font-size:10px; margin-left:10px;">?�� Copy JSON</button>
                         </summary>
                         <pre style="font-size:12px; margin-top:10px; color:#e2e8f0; max-height:300px; overflow-y:auto; background:rgba(0,0,0,0.3); padding:10px; border-radius:4px; white-space: pre-wrap; word-break: break-all;">${jsonStr}</pre>
                     </details>
@@ -1767,7 +1767,7 @@
             document.execCommand('copy');
             document.body.removeChild(textArea);
             const originalText = button.textContent;
-            button.textContent = '✅ Copied!';
+            button.textContent = '??Copied!';
             setTimeout(() => { button.textContent = originalText; }, 2000);
         }
 
@@ -1926,9 +1926,9 @@
             if (!key || !model || !url) { alert('Fill fields'); return; }
             try {
                 const res = await api.test_profile(key, model, url, pSel.value);
-                if (res.ok) alert('✅ Key is valid!');
-                else alert('❌ Failed: ' + res.message);
-            } catch (e) { alert('❌ Error: ' + e.message); }
+                if (res.ok) alert('??Key is valid!');
+                else alert('??Failed: ' + res.message);
+            } catch (e) { alert('??Error: ' + e.message); }
         }
 
         async function saveProfile() {
@@ -1945,10 +1945,10 @@
             if (currentId !== 'new') profileData.id = currentId;
             try {
                 await api.save_profile(profileData);
-                alert('✅ Profile saved!');
+                alert('??Profile saved!');
                 await loadProfiles();
                 closeModals();
-            } catch (e) { alert('❌ Save failed'); }
+            } catch (e) { alert('??Save failed'); }
         }
 
         async function deleteProfile() {
@@ -1957,7 +1957,7 @@
             if (!confirm('Delete profile?')) return;
             try {
                 const res = await api.delete_profile(currentId);
-                if (res.status === 'deleted') { alert('✅ Deleted'); await loadProfiles(); loadProfileForm('new'); }
+                if (res.status === 'deleted') { alert('??Deleted'); await loadProfiles(); loadProfileForm('new'); }
             } catch (e) { alert('Error'); }
         }
 
@@ -2106,7 +2106,7 @@
             }
             try {
                 await api.save_server_config(name, cmd, args, trans, url, headers);
-                alert('✅ Saved!');
+                alert('??Saved!');
                 await loadServerList();
                 updateServerStatus();
             } catch(e) { alert('Save failed: ' + e.message); }
@@ -2117,7 +2117,7 @@
             if (!name || !confirm(`Delete server '${name}'?`)) return;
             try {
                 const res = await api.delete_server(name);
-                if (res.status === 'deleted') { alert('✅ Deleted'); await loadServerList(); }
+                if (res.status === 'deleted') { alert('??Deleted'); await loadServerList(); }
             } catch(e) { alert('Error'); }
         }
 
@@ -2128,7 +2128,7 @@
             const area = document.getElementById('server-tools-area');
             const list = document.getElementById('server-tools-list');
             if (area) area.style.display = 'block';
-            if (list) list.innerHTML = '<div style="color:#f59e0b;">⏳ Testing connection...</div>';
+            if (list) list.innerHTML = '<div style="color:#f59e0b;">??Testing connection...</div>';
 
             try {
                 const trans = document.querySelector('input[name="transport"]:checked').value;
@@ -2145,7 +2145,7 @@
                 const res = await api.test_connection(cmd, args, trans, url, headers);
                 if (res.ok) {
                     const statusColor = res.status === 'connected' ? '#4ade80' : '#f59e0b';
-                    list.innerHTML = `<div style="color:${statusColor}; margin-bottom:5px;">✅ Connected (Status: ${res.status})</div>`;
+                    list.innerHTML = `<div style="color:${statusColor}; margin-bottom:5px;">??Connected (Status: ${res.status})</div>`;
                     if (res.tools && res.tools.length > 0) {
                         res.tools.forEach(t => {
                             const d = document.createElement('div');
@@ -2157,11 +2157,11 @@
                         list.innerHTML += '<div style="color:#94a3b8;">No tools discovered yet.</div>';
                     }
                 } else {
-                    list.innerHTML = `<div style="color:#f87171; font-weight:bold;">❌ Connection Failed</div>`;
+                    list.innerHTML = `<div style="color:#f87171; font-weight:bold;">??Connection Failed</div>`;
                     if (res.message) list.innerHTML += `<div style="color:#cbd5e1; margin-top:5px;">${res.message}</div>`;
                 }
             } catch (e) {
-                if (list) list.innerHTML = `<div style="color:#f87171;">❌ System Error: ${e.message}</div>`;
+                if (list) list.innerHTML = `<div style="color:#f87171;">??System Error: ${e.message}</div>`;
             }
         }
 
@@ -2206,8 +2206,8 @@
             };
             try {
                 await api.save_engine_config(config);
-                alert('✅ Saved!');
-            } catch (e) { alert('❌ Failed'); }
+                alert('??Saved!');
+            } catch (e) { alert('??Failed'); }
         }
 
         async function loadPersonas() {
