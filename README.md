@@ -7,18 +7,26 @@ English | [한국어](./README.ko-KR.md)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=for-the-badge)](requirements.txt)
 [![MCP](https://img.shields.io/badge/MCP-Native-blueviolet?style=for-the-badge)](https://modelcontextprotocol.io)
 
-**AI-powered desktop and web workspace for Model Context Protocol (MCP).**  
-Connect MCP servers, manage AI profiles, use personas, and run tools in browser or desktop mode.
+**Professional MCP Operation Workspace.**  
+A specialized environment for connecting, testing, and managing Model Context Protocol (MCP) servers and AI profiles.
 
 ---
 
-## 🚀 What it does
+[**🚀 Launch Product Homepage**](https://lim-asdk.github.io/Matrix_MCP_V2/) | [**💾 Download Latest Release**](https://github.com/lim-asdk/Matrix_MCP_V2/releases/latest)
 
-- **MCP Native**: Connects to MCP servers over **stdio** and **SSE**.
-- **Multi-AI Support**: Use any OpenAI-compatible API (Grok, OpenAI, DeepSeek, etc.).
-- **Hybrid Runtime**: Run as a native **Windows Desktop** app or a **Web Server**.
-- **Persona System**: Custom AI behaviors via simple `.txt` persona files.
-- **Tool Workspace**: Real-time tool execution logs and interactive UI.
+---
+
+## 📖 Technical Overview
+
+Matrix MCP is a specialized workspace focused on the **operational** aspects of the Model Context Protocol. While many clients focus on simple chat, Matrix MCP provides a structured environment for managing the lifecycle of MCP connections and AI tool-calling workflows.
+
+### Core Capabilities
+- **Native MCP Support**: Direct integration with **stdio** and **SSE** transport layers.
+- **Provider Agnostic**: Seamlessly bridge any OpenAI-compatible API (Grok, OpenAI, DeepSeek, Google Gemini) for tool execution.
+- **Dual Runtime**: Optimized for both **Web-first** browser interaction and **Windows Desktop** stability.
+- **Operator Inspector**: Real-time monitoring of raw tool requests, responses, and AI reasoning chains.
+
+---
 
 ---
 

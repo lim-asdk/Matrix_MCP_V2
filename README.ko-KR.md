@@ -6,8 +6,26 @@
 [![License](https://img.shields.io/badge/라이선스-PolyForm--비상업용-blue?style=for-the-badge)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-green?style=for-the-badge)](requirements.txt)
 
-**Model Context Protocol(MCP)을 위한 AI 기반 통합 데스크톱 및 웹 워크스페이스입니다.**  
-MCP 서버 연결, AI 프로필 관리, 페르소나 시스템을 지원하며 브라우저 또는 데스크톱 환경에서 즉시 실행 가능합니다.
+**전문적인 MCP 운영 워크스페이스.**  
+Model Context Protocol(MCP) 서버와 AI 프로필을 연결, 테스트 및 관리하기 위한 전문 환경입니다.
+
+---
+
+[**🚀 제품 홈페이지 바로가기**](https://lim-asdk.github.io/Matrix_MCP_V2/) | [**💾 최신 릴리스 다운로드**](https://github.com/lim-asdk/Matrix_MCP_V2/releases/latest)
+
+---
+
+## 📖 기술 개요 (Technical Overview)
+
+Matrix MCP는 Model Context Protocol의 **운영(Operational)** 측면에 집중한 특화 워크스페이스입니다. 일반적인 챗봇 클라이언트가 단순히 채팅에 치중하는 것과 달리, Matrix MCP는 MCP 연결의 생애주기 관리와 AI 도구 호출(Tool-calling) 워크플로우를 위한 구조화된 환경을 제공합니다.
+
+### 핵심 역량
+- **기본 MCP 지원**: **stdio** 및 **SSE** 전송 계층과의 직접적인 통합.
+- **제공자 중립성**: Grok, OpenAI, DeepSeek, Google Gemini 등 모든 OpenAI 호환 API를 도구 실행과 매끄럽게 연결합니다.
+- **하이브리드 런타임**: 빠른 브라우저 기반 상호작용(Web-first)과 안정적인 Windows 데스크톱 실행 환경에 최적화되었습니다.
+- **운영자용 검사기(Inspector)**: 원본 도구 요청/응답 데이터와 AI의 추론 체인을 실시간으로 모니터링할 수 있습니다.
+
+---
 
 ---
 
